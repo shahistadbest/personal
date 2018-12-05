@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:shrinkColumns="*"  android:stretchColumns="*"
+    tools:context=".MainActivity">
+
+    <TableRow
+
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+
+        >
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="500px"
+            android:layout_span="4"
+            android:padding="3dip"
+            android:text=""
+            android:textSize="20dp" />
+
+    </TableRow>
+
+    <TableRow>
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_span="1"
+
+            android:text="C"
+            android:padding="3dip" />
+        <ImageButton
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_span="1"
+            android:src="@drawable/iconfinder_backspace_83227"
+            android:text=""
+            android:padding="3dip" />
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_span="1"
+            android:text="Open..."
+            android:padding="3dip" />
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_span="1"
+            android:text="Open..."
+            android:padding="3dip" />
+    </TableRow>
+
+    <TableRow>
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_span="1"
+
+            android:text="Open..."
+            android:padding="3dip" />
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_span="1"
+            android:text="Open..."
+            android:padding="3dip" />
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_span="1"
+            android:text="Open..."
+            android:padding="3dip" />
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_span="1"
+            android:text="Open..."
+            android:padding="3dip" />
+    </TableRow>
+
+    <TableRow>
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_span="1"
+
+            android:text="Open..."
+            android:padding="3dip" />
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_span="1"
+            android:text="Open..."
+            android:padding="3dip" />
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_span="1"
+            android:text="Open..."
+            android:padding="3dip" />
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_span="1"
+            android:text="Open..."
+            android:padding="3dip" />
+    </TableRow>
+
+    <TableRow>
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_span="1"
+
+            android:text="Open..."
+            android:padding="3dip" />
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_span="1"
+            android:text="Open..."
+            android:padding="3dip" />
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_span="1"
+            android:text="Open..."
+            android:padding="3dip" />
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_span="1"
+            android:text="Open..."
+            android:padding="3dip" />
+
+
+    </TableRow>
+
+    <TableRow>
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_span="1"
+
+            android:text="Open..."
+            android:padding="3dip" />
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_span="1"
+            android:text="Open..."
+            android:padding="3dip" />
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_span="2"
+            android:text="Open..."
+            android:padding="3dip" />
+
+    </TableRow>
+
+
+
+
+</TableLayout>
