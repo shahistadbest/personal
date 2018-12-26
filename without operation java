@@ -1,0 +1,235 @@
+package com.example.b_shahistaashaikh.myapplication;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.support.v7.widget.ButtonBarLayout;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
+
+
+public class MainActivity extends AppCompatActivity {
+
+    private TextView tformula;
+    private TextView tresult;
+    int equal_flag=1;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState)
+    {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        tresult = (TextView)findViewById(R.id.txt2);
+        tformula = (TextView)findViewById(R.id.txt1);
+
+
+
+
+     };
+
+    public void del(View v)
+    {
+
+        {
+            String display = tformula.getText().toString();
+            display = display.substring(0, display.length() - 1);
+            tformula.setText(display);
+        }
+        if(tformula.getText().length()==0)
+        {
+            tformula.setText("0");
+        }
+    }
+
+    public void clear()
+    {
+        tformula.setText("0");
+        tresult.setText("=0");
+    }
+
+    public void equal(View v)
+    {
+        equal_flag=1;
+        //clear();
+        tresult.setText("=6573");
+    }
+
+
+    private void validateOperator(View v)
+    {
+        if(equal_flag==1)
+        {
+            CharSequence ans=tresult.getText();
+            ans=ans.subSequence(1,ans.length());
+            tformula.setText(ans);
+            equal_flag=0;
+        }
+        else {
+            CharSequence formula = tformula.getText();
+            Character last_character = formula.charAt(formula.length() - 1);
+            if (!Character.isDigit(last_character)) {
+                del(v);
+            }
+        }
+    }
+
+    public void addition(View v)
+    {
+        validateOperator(v);
+        tformula.setText(tformula.getText() + "+");
+
+    }
+
+    public void subtraction(View v)
+    {
+        validateOperator(v);
+        tformula.setText(tformula.getText() + "-");
+
+    }
+
+    public void division(View v)
+    {
+        validateOperator(v);
+        tformula.setText(tformula.getText() + "/");
+
+
+    }
+
+    public void multiplication(View v)
+    {
+        validateOperator(v);
+        tformula.setText(tformula.getText() + "*");
+
+    }
+
+    public void numberValidation()
+    {
+        if(equal_flag==1)
+        {
+            clear();
+            equal_flag=0;
+        }
+    }
+
+    public void one(View  v)
+    {
+        Toast toast = Toast.makeText(getApplicationContext()," "+tformula.getText(),
+                Toast.LENGTH_SHORT);
+
+        toast.show();
+        numberValidation();
+        if(tformula.getText().length()==1 && tformula.getText()=="0")
+        {
+            tformula.setText("1");
+        }
+        else
+            tformula.setText(tformula.getText() + "1");
+    }
+
+    public void two(View v)
+    {
+        numberValidation();
+        if(tformula.getText().length()==1 && tformula.getText()=="0")
+        {
+            tformula.setText("2");
+        }
+        else
+        tformula.setText(tformula.getText() + "2");
+    }
+
+    public void three(View v)
+    {
+        numberValidation();
+        if(tformula.getText().length()==1 && tformula.getText()=="0")
+        {
+            tformula.setText("3");
+        }
+        else
+        tformula.setText(tformula.getText() + "3");
+    }
+
+    public void four(View v)
+    {
+        numberValidation();
+        if(tformula.getText().length()==1 && tformula.getText()=="0")
+        {
+            tformula.setText("4");
+        }
+        else
+        tformula.setText(tformula.getText() + "4");
+    }
+
+    public void five(View  v)
+    {
+        numberValidation();
+        if(tformula.getText().length()==1 && tformula.getText()=="0")
+        {
+            tformula.setText("5");
+        }
+        else
+        tformula.setText(tformula.getText() + "5");
+    }
+
+    public void six(View  v)
+    {
+        numberValidation();
+        if(tformula.getText().length()==1 && tformula.getText()=="0")
+        {
+            tformula.setText("6");
+        }
+        else
+        tformula.setText(tformula.getText() + "6");
+    }
+
+    public void seven(View  v)
+    {
+        numberValidation();
+        if(tformula.getText().length()==1 && tformula.getText()=="0")
+        {
+            tformula.setText("7");
+        }
+        else
+        tformula.setText(tformula.getText() + "7");
+    }
+
+    public void eight(View  v)
+    {
+
+        numberValidation();
+        if(tformula.getText().length()==1 && tformula.getText()=="0")
+        {
+            tformula.setText("8");
+        }
+        else
+        tformula.setText(tformula.getText() + "8");
+    }
+
+    public void nine(View  v)
+    {
+        numberValidation();
+        if(tformula.getText().length()==1 && tformula.getText()=="0")
+        {
+            tformula.setText("9");
+        }
+        else
+        tformula.setText(tformula.getText() + "9");
+    }
+
+    public void zero(View  v)
+    {
+        numberValidation();
+        if(tformula.getText().length()==1 && tformula.getText()=="0")
+        {
+            tformula.setText("0");
+        }
+        else
+        tformula.setText(tformula.getText() + "0");
+    }
+
+
+    public void ac(View v)
+    {
+        clear();
+    }
+}
